@@ -1,6 +1,9 @@
 package springavanzado.ejercicio0.service;
 
-public class CalculadoraImpl implements Calculadora {
+import org.springframework.stereotype.Service;
+
+@Service // id = calculadoraServiceImpl
+public class CalculadoraServiceImpl implements CalculadoraService {
 
 	public float sumar(float a, float b) {
 		return a + b;

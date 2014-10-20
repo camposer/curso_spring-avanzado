@@ -12,7 +12,6 @@ Curso de Spring Avanzado
 - Características avanzadas de Spring para el desarrollo de aplicaciones Web.
 - Creación de sistemas distribuidos: servidores Web y Remoting
 - Integración con la plataforma J2EE
-- EJBs, mensajería JMS (Java Message Service) y correo electrónico
 - Creación de tareas planificadas en Spring
 - Desarrollo dirigido por test en Spring
 

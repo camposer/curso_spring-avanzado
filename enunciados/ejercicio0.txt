@@ -1,4 +1,4 @@
-0.- Crear una clase Calculadora parecida a la del ejercicio (7 de curso_in_java) que ofrezca los métodos: 
+1.- Crear una clase Calculadora parecida a la del ejercicio (7 de curso_in_java) que ofrezca los métodos: 
 	- public float sumar(float, float);
 	- public float restar(float, float);
 	- public float multiplicar(float, float);
@@ -20,4 +20,10 @@ Ejemplo de GUI:
 	a? 1
 	b? 1
 	a + b = 2
+
+2.- Refactorizar el código para que funcione con anotaciones
+
+
+
+
 

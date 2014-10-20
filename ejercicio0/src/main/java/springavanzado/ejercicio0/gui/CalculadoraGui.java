@@ -2,10 +2,13 @@ package springavanzado.ejercicio0.gui;
 
 import java.util.Scanner;
 
-import springavanzado.ejercicio0.service.Calculadora;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import springavanzado.ejercicio0.service.CalculadoraService;
 
 public class CalculadoraGui {
-	private Calculadora calculadora;
+	@Autowired // Inyección por tipo de dato
+	private CalculadoraService calculadora;
 	private Scanner scanner;
 	
 	public CalculadoraGui() {
@@ -43,9 +46,5 @@ public class CalculadoraGui {
 					System.out.println(a + " / " + b + " = " + calculadora.dividir(a, b));
 			}
 		}
-	}
-	
-	public void setCalculadora(Calculadora calculadora) {
-		this.calculadora = calculadora;
 	}
 }

@@ -9,9 +9,9 @@ Cómo configurar un proyecto con Spring
 	- A través de clase con anotaciones
 
 
-##Carga de proyectos con anotaciones:
-1. Utilizando component-scan y anotaciones @Component o cualquiera de sus hijas (@Service, @Controller, @Repository)
+Carga de proyectos con anotaciones:
 
+1. Utilizando component-scan y anotaciones @Component o cualquiera de sus hijas (@Service, @Controller, @Repository)
 
 2. Utilizando component-scan y anotaciones @Configuration (Java Config)
 	- Los beans se colocan dentro de la clase con anotación @Bean
