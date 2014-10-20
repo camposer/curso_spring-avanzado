@@ -1,0 +1,30 @@
+Cómo configurar un proyecto con Spring
+======================================
+
+1. Agregar dependencias (pom.xml)
+2. Agregar ficher de configuración del contexto (applicationContext.xml)
+3. Configurar el Bean Factory, por ejemplo:
+	- A través de ClassPathXmlApplicationContext 
+	- A través de front controller (DispatcherServlet - Spring MVC)
+	- A través de clase con anotaciones
+
+
+##Carga de proyectos con anotaciones:
+1. Utilizando component-scan y anotaciones @Component o cualquiera de sus hijas (@Service, @Controller, @Repository)
+
+
+2. Utilizando component-scan y anotaciones @Configuration (Java Config)
+	- Los beans se colocan dentro de la clase con anotación @Bean
+	- El nombre de los métodos es el id del bean
+	- Si se desea cambiar el nombre del bean se debe agregar el atributo name a la anotación @Bean
+	- Si se desea cambiar el scope del bean se debe agregar la etiqueta @Scope, por ejemplo: @Scope("prototype")
+	- Si se desea inyectar dependencias se puede hacer de 2 formas, a saber:
+		- Utilizando el setter de la clase invocando el método @Bean correspondiente
+		- Utilizando la anotación @Autowired donde se necesite. Si necesitara especificar un id, se utiliza @Qualifier
+
+
+
+
+
+
+
