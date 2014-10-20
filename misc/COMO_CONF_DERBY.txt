@@ -5,6 +5,9 @@
 
 (debería abrirse una consola y quedarse escuchando en el puerto 1527)
 
-Para corregir el problema al abrir el Derby, agregar al fichero JDK_HOME/jre/lib/security/java.policy la siguiente línea (dentro del grant general):
+Para corregir el problema al abrir el Derby, agregar a los ficheros JDK_HOME\jre\lib\security\java.policy y JRE_HOME\lib\security\java.policy la siguiente línea (dentro del grant general):
 
 permission java.net.SocketPermission "localhost:1527", "listen,resolve";
+
+NOTA:
+	- JRE_HOME muy probablemente apunte a C:\Archivos de programa\Java\jre_1.8XX
