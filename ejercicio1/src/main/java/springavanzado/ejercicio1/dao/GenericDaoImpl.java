@@ -30,14 +30,14 @@ public class GenericDaoImpl<T, K> implements GenericDao<T, K> {
 	}
 
 	public void eliminar(K id) {
-		Query q = em.createQuery("DELETE FROM " + clazz.getSimpleName() + " WHERE id = :id");
+		Query q = em.createQuery("DELETE FROM " + clazz.getSimpleName() + " t WHERE t.id = :id");
 		q.setParameter("id", id);
 		q.executeUpdate();
 	}
 
 	@SuppressWarnings("unchecked")
 	public List<T> obtenerTodos() {
-		return em.createQuery("SELECT t FROM " + clazz.getSimpleName())
+		return em.createQuery("SELECT t FROM " + clazz.getSimpleName() + " t")
 				.getResultList();
 	}
 
