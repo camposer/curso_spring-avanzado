@@ -1,4 +1,6 @@
-package springavanzado.basico;
+package springavanzado.basicoant.service;
+
+import springavanzado.basicoant.to.Envoltorio;
 
 public class HolaMundoImpl implements HolaMundo {
 	private Envoltorio envoltorio;

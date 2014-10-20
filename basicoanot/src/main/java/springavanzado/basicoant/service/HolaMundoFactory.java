@@ -1,4 +1,4 @@
-package springavanzado.basico;
+package springavanzado.basicoant.service;
 
 public abstract class HolaMundoFactory {
 	public static HolaMundo createHolaMundo() {

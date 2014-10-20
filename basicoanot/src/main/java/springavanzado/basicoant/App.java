@@ -1,7 +1,10 @@
-package springavanzado.basico;
+package springavanzado.basicoant;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import springavanzado.basicoant.service.HolaMundo;
+import springavanzado.basicoant.service.HolaMundoFactory;
 
 
 public class App 
