@@ -9,6 +9,7 @@ import springavanzado.ejercicio1.service.PersonaService;
 import springavanzado.model.Persona;
 
 public class TmpTest {
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
 		PersonaService personaService = ctx.getBean(PersonaService.class);

@@ -1,0 +1,15 @@
+Ejercicio1
+==========
+
+0.- Generar el modelo a partir de la BD
+	- Cumplimentar fichero classpath:META-INF/persistence.xml
+
+1.- Implementar los DAO y Servicios correspondientes a los modelos: persona y ordenador.
+	- Agregar configuraciones de acceso a datos (entityManager, entityManagerFactory, transactionManager)
+	- Agregar implementación genérica de DAO. Debe inyectar el entityManager y agregar la anotación @PersistenceContext
+	- Implementar PersonaDaoImpl (con su interfaz correspondiente)
+	- Implementar PersonaServiceImpl (con su interfaz correspondiente)
+
+FALTA: 
+- Probar todos los métodos de PersonaService (hasta ahora sólo hemos probado: obtenerPersonas y agregarPersona) - Ver clase TmpTest
+- DAO y Service de Ordenador!!!
