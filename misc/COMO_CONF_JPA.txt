@@ -1,0 +1,8 @@
+Cómo configurar JPA con Spring
+==============================
+
+0.- Prerequisitos:
+	- Librerías en POM
+	- Archivo de configuración de Spring
+1.- Debe configurar en Spring la creación del entityManagerFactory, entityManager y transactionManager.
+2.- Donde se vaya a utilizar el entityManager se debe inyectar y colocar la anotación @PersistenceContext
