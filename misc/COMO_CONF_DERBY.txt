@@ -1,0 +1,10 @@
+- Descargar db-derby
+- Decomprimir (DERBY_HOME es la ruta donde descomprimió el derby)
+- Ejecutar:
+	C:\DERBY_HOME\bin\startNetworkServer.bat
+
+(debería abrirse una consola y quedarse escuchando en el puerto 1527)
+
+Para corregir el problema al abrir el Derby, agregar al fichero JDK_HOME/jre/lib/security/java.policy la siguiente línea (dentro del grant general):
+
+permission java.net.SocketPermission "localhost:1527", "listen,resolve";
