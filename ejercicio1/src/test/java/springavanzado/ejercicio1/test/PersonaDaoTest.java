@@ -1,8 +1,10 @@
 package springavanzado.ejercicio1.test;
 
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
+
 import java.util.Date;
 
-import static org.junit.Assert.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +16,8 @@ import springavanzado.ejercicio1.dao.PersonaDao;
 import springavanzado.model.Persona;
 
 @RunWith(SpringJUnit4ClassRunner.class) // Configura Spring para hacer la prueba
-@ContextConfiguration(locations="classpath:applicationContext-test.xml") // Define fichero de configuración de Spring
+//@ContextConfiguration(locations="classpath:applicationContext.xml") // Define fichero de configuración de Spring
+@ContextConfiguration(locations="classpath:applicationContext-test.xml") 
 @Transactional // Porque estoy probando un DAO, si fuese el servicio no es necesario
 public class PersonaDaoTest {
 	@Autowired

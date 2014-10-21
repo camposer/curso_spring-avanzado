@@ -3,24 +3,33 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
- 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd">
+ 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
+ 		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.1.xsd">
 
 	<context:annotation-config />
-	<context:component-scan base-package="springavanzado.ejercicio1.config" />
 	<context:component-scan base-package="springavanzado.ejercicio1.dao" />
 	<context:component-scan base-package="springavanzado.ejercicio1.service" />
-<!-- 
+	
+	<jdbc:embedded-database id="dataSource" type="HSQL">
+	</jdbc:embedded-database>
+
 	<bean id="entityManagerFactory"
-		class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean">
-		<property name="persistenceUnitName" value="LibreriaJpa" />
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="persistenceXmlLocation" value="META-INF/persistence-test.xml" />
+		<property name="persistenceUnitName" value="personabd-test" />
+		<property name="dataSource" ref="dataSource" />
+		<property name="jpaVendorAdapter">
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+				<!-- Create the database, please -->
+				<property name="generateDdl" value="true" />
+			</bean>
+		</property>
 	</bean>
-	<bean id="entityManager" factory-bean="entityManagerFactory"
-		factory-method="createEntityManager" />
 	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
 		<property name="entityManagerFactory" ref="entityManagerFactory" />
 	</bean>
-	<tx:annotation-driven transaction-manager="transactionManager" />
- -->
+	<tx:annotation-driven />
 </beans>
