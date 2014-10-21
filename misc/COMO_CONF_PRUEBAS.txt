@@ -21,5 +21,5 @@ https://stackoverflow.com/questions/385532/how-to-configure-jpa-for-testing-in-m
 
 IMPORTANTE:
 	- Cuando se ejecutan pruebas con @Transactional, Spring automáticamente hace rollback de los datos comprometidos. 
-	- Si por alguna razón no se estuviesen comprometiendo datos inmediatamente después de ejecutar el método EntityManager::persist, se puede utilizar EntityManager::flush para obligar al ORM a persistir los datos.
+	- Si por alguna razón no se estuviesen comprometiendo datos inmediatamente después de ejecutar el método EntityManager::persist o EntityManager::merge, se puede utilizar EntityManager::flush para obligar al ORM a persistir los datos.
 	- Siempre que se pueda, para pruebas de integración, utilizar bases de datos en memoria. Sino, estaríamos realizando algo más parecido a una prueba de sistema.
