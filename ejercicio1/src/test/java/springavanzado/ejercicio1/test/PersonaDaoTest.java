@@ -1,16 +1,14 @@
 package springavanzado.ejercicio1.test;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.assertNotEquals;
-import static org.junit.Assert.assertEquals;
 
 import java.util.Date;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -55,7 +53,6 @@ public class PersonaDaoTest {
 	}
 	
 	@Test
-	@Ignore
 	public void modificar() {
 		Persona p = new Persona();
 		p.setNombre("Nombre prueba");
@@ -71,15 +68,15 @@ public class PersonaDaoTest {
 		
 		personaDao.modificar(p);
 		
-		entityManager.flush(); // Obligando a persistir los datos
+//		entityManager.flush(); // Obligando a persistir los datos
 		
 		// Obteniendo el registro recién modificado
 		Persona pMod = personaDao.obtener(p.getId());
 
 		assertEquals(p.getId(), pMod.getId());
-		assertNotEquals(p.getNombre(), pMod.getNombre());
-		assertNotEquals(p.getApellido(), pMod.getApellido());
-		assertNotEquals(p.getFechanacimiento(), pMod.getFechanacimiento());
+		assertEquals(p.getNombre(), pMod.getNombre());
+		assertEquals(p.getApellido(), pMod.getApellido());
+		assertEquals(p.getFechanacimiento(), pMod.getFechanacimiento());
 		
 	}
 	
