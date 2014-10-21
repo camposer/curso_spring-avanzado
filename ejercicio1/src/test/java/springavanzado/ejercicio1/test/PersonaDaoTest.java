@@ -24,7 +24,6 @@ import springavanzado.model.Persona;
 @ContextConfiguration(locations="classpath:applicationContext-test.xml") 
 @Transactional // Porque estoy probando un DAO, si fuese el servicio no es necesario
 public class PersonaDaoTest {
-	@Autowired
 	@PersistenceContext
 	private EntityManager entityManager;
 	@Autowired
@@ -68,7 +67,7 @@ public class PersonaDaoTest {
 		
 		personaDao.modificar(p);
 		
-//		entityManager.flush(); // Obligando a persistir los datos
+		entityManager.flush(); // Obligando a persistir los datos
 		
 		// Obteniendo el registro recién modificado
 		Persona pMod = personaDao.obtener(p.getId());
