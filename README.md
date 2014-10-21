@@ -27,3 +27,6 @@ Curso de Spring Avanzado
 	- https://github.com/camposer/curso_testing
 - JUnit (incluye ejemplos, etc)
 	- http://junit.org/
+- Scaling Agile @ Spotify
+	- http://ucvox.files.wordpress.com/2012/11/113617905-scaling-agile-spotify-11.pdf
+	- http://blog.crisp.se/wp-content/uploads/2013/06/Scaling-Agile-at-Spotify-DARE-2013-Jimmy-Janl%C3%A9n-Crisp.pdf
