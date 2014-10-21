@@ -46,7 +46,7 @@ public class PersonaDaoTest {
 		
 		int numPersonasNuevo = personaDao.obtenerTodos().size();
 		
-		// TODO Podrían validar que todos los campos fueron insertados correctamente
+		// TODO Validar que todos los campos fueron insertados correctamente
 		assertTrue(numPersonas < numPersonasNuevo);
 		assertNotNull(p.getId());
 	}
@@ -65,7 +65,7 @@ public class PersonaDaoTest {
 		p.setApellido(p.getApellido() + " mod");
 		p.setFechanacimiento(new Date());
 		
-		personaDao.modificar(p);
+		personaDao.modificar(p); // Modificando la persona
 		
 		entityManager.flush(); // Obligando a persistir los datos
 		
@@ -89,13 +89,11 @@ public class PersonaDaoTest {
 		p.setFechanacimiento(new Date());
 		
 		personaDao.agregar(p); // Añadiendo la persona
-
 		int numPersonasNuevo = personaDao.obtenerTodos().size();
 		
 		assertTrue(numPersonas < numPersonasNuevo);
 		
 		personaDao.eliminar(p.getId());
-		
 		numPersonasNuevo = personaDao.obtenerTodos().size();
 		
 		assertEquals(numPersonas, numPersonasNuevo);
