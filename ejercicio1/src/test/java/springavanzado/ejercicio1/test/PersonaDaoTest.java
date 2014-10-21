@@ -22,7 +22,7 @@ import springavanzado.model.Persona;
 public class PersonaDaoTest {
 	@Autowired
 	private PersonaDao personaDao;
-	
+
 	@Test
 	public void agregar() {
 		Date fecha = new Date();

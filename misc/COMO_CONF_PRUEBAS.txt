@@ -1,0 +1,25 @@
+Cómo configurar pruebas con Spring
+==================================
+
+Recuerde que las carpetas src/main y src/test están dentro del classpath, esto es importante, porque a la hora de constuir el war podrían presentarse conflictos si dos archivos se llaman igual (por ejemplo). Para solucionar este conflicto, si lo hubiere, puede utilizar el plugin de ant para maven. Ver: 
+https://stackoverflow.com/questions/385532/how-to-configure-jpa-for-testing-in-maven/2949496#2949496
+
+1.- Debe agregar al POM las dependencias de pruebas: spring-test y junit. Si desea utilizar una BD en memoria, como hsqldb, debe agregar las dependencias al POM. Es recomendable añadir scope = test.
+2.- El código Java de las pruebas debe colocarse dentro de la carpeta src/test/java y los archivos de configuración en src/test/resources
+3.- La clase de prueba debe llevar las siguientes configuraciones:
+	- @RunWith - Indica el runner, para spring: SpringJUnit4ClassRunner
+	- @ContextConfiguration - Indica la ubicación del fichero de configuración de Spring. Puede utilizar el fichero de configuración principal (producción), aunque se recomienda crear uno nuevo especial para pruebas.
+	- @Transactional (opcional) - En caso de probar DAOs deberá utilizar esta anotación para gestionar conexiones y transacciones (transactionManager)
+4.- Las pruebas con JUnit deben probar condiciones (aserciones). Las aserciones son parte de la clase org.junit.Assert
+5.- Algunas de las anotaciones principales para utilizar con JUnit son:
+	- @BeforeClass - Se ejecuta cuando se carga la clase
+	- @AfterClass - Se ejecuta cuando termina la clase
+	- @Before - Se ejecuta antes de cada prueba (test)
+	- @After - Se ejecuta después de cada prueba
+	- @Test - Define una prueba
+	- @Ignore - Marca una prueba como descartable
+
+IMPORTANTE:
+	- Cuando se ejecutan pruebas con @Transactional, Spring automáticamente hace rollback de los datos comprometidos. 
+	- Si por alguna razón no se estuviesen comprometiendo datos inmediatamente después de ejecutar el método EntityManager::persist, se puede utilizar EntityManager::flush para obligar al ORM a persistir los datos.
+	- Siempre que se pueda, para pruebas de integración, utilizar bases de datos en memoria. Sino, estaríamos realizando algo más parecido a una prueba de sistema.
