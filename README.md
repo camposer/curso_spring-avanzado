@@ -23,3 +23,5 @@ Curso de Spring Avanzado
 	- https://github.com/camposer/curso_spring-hibernate
 - Curso de Spring MVC
 	- https://github.com/camposer/curso_springmvc
+- Curso de Testing (con Spring)
+	- https://github.com/camposer/curso_testing
