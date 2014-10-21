@@ -10,6 +10,16 @@ Ejercicio1
 	- Implementar PersonaDaoImpl (con su interfaz correspondiente)
 	- Implementar PersonaServiceImpl (con su interfaz correspondiente)
 
-FALTA: 
-- Probar todos los métodos de PersonaService (hasta ahora sólo hemos probado: obtenerPersonas y agregarPersona) - Ver clase TmpTest
-- DAO y Service de Ordenador!!!
+2.- Implementar el CRUD+ para Persona
+	2.1.- Implementar la lista (+) de personas (acción: /persona/index.do)
+	2.2.- Implementar el agregar (C) de personas
+	2.3.- Implementar el eliminar (D) de personas. Si tiene ordenadores asociados, estos deben borrarse previamente de forma automática.
+	2.4.- Implementar el mostrar (R) de personas
+	2.5.- Implementar el modificar (U) de personas
+
+3.- Implementar el CRUD+ para Ordenador. Seguir el mismo orden de implementación aplicado en CRUD+ de Persona.
+
+
+
+
+
