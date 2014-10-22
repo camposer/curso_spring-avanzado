@@ -9,5 +9,5 @@ public interface PersonaService {
 	public void modificarPersona(Persona p);
 	public void eliminarPersona(Integer id);
 	public List<Persona> obtenerPersonas();
-	public Persona obtener(Integer id);
+	public Persona obtenerPersona(Integer id);
 }

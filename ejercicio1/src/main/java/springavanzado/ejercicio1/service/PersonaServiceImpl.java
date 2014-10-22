@@ -35,7 +35,7 @@ public class PersonaServiceImpl implements PersonaService {
 		return personaDao.obtenerTodos();
 	}
 
-	public Persona obtener(Integer id) {
+	public Persona obtenerPersona(Integer id) {
 		return personaDao.obtener(id);
 	}
 	

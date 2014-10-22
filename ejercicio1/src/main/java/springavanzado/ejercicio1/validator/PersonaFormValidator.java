@@ -6,7 +6,6 @@ import org.springframework.validation.Validator;
 import springavanzado.ejercicio1.form.PersonaForm;
 
 public class PersonaFormValidator implements Validator {
-
 	/**
 	 * Valida que el form guarda correspondencia con el validador
 	 */
