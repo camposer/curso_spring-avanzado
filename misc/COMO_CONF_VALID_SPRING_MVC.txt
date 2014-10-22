@@ -1,4 +1,25 @@
 Cómo configurar validaciones con Spring MVC
 ===========================================
 
-...
+1.- Añadir dependencias al POM. Debe agregar la API y una implementación, por ejemplo: validation-api e hibernate-validator
+
+2.- Construir el validador. Debe implementar una clase que implemente la interfaz org.springframework.validation.Validator. Los errores deberá agregarlos al objeto de tipo org.springframework.validation.Errors dentro del método validate (utilizando el método reject)
+
+3.- Enlazar el validador al controlador que contiene la acción a validar. 
+	- Implementar un método con la siguiente firma:
+		@InitBinder
+		public void initBinder(WebDataBinder binder);
+	- Añadir una instancia del validador al binder
+		binder.addValidators(new XxxValidator());
+
+4.- Añadir al método correspondiente a la acción que se desea validar, el ModelAttribute anotado como @Valid. Además, debe añadir al final de los argumentos un BindingResult. Por ejemplo:
+	@RequestMapping("yyy")
+	public String agregar(Model model, 
+			@Valid @ModelAttribute("xxxForm") XxxForm xxxForm,
+			BindingResult result) {
+
+		if (result.hasErrors()) 
+			// ...
+		else
+			// ...
+	}
