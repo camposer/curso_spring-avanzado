@@ -14,6 +14,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 
 
 /**
@@ -77,6 +78,11 @@ public class Persona implements Serializable {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
+	}
+
+	@Transient
+	public String getNombreCompleto() {
+		return this.nombre + " " + this.apellido;
 	}
 
 	public List<Ordenador> getOrdenadores() {
