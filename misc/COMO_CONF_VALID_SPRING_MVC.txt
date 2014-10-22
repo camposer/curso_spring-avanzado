@@ -23,3 +23,17 @@ Cómo configurar validaciones con Spring MVC
 		else
 			// ...
 	}
+
+---
+
+Para imprimir los errores en la vista debe utilizar la etiqueta personalizada form de Spring, por ejemplo:
+
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
+//...
+
+<form:form action="yyy.do" method="post" commandName="xxxForm">
+		<form:errors path="*" />
+		// ...
+</form:form>
+
