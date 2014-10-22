@@ -1,12 +1,10 @@
 package springavanzado.ejercicio1.controller;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -16,6 +14,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import springavanzado.ejercicio1.editor.FechaEditor;
 import springavanzado.ejercicio1.form.PersonaForm;
 import springavanzado.ejercicio1.service.PersonaService;
 import springavanzado.ejercicio1.validator.PersonaFormValidator;
@@ -30,12 +29,14 @@ public class PersonaController {
 	@InitBinder // Configuraciones del controller
 	public void initBinder(WebDataBinder binder) {
 		binder.addValidators(new PersonaFormValidator());
+		/*
 		binder.registerCustomEditor(Date.class, 
 				new CustomDateEditor(
 						new SimpleDateFormat("yyyy-MM-dd"), 
 						false)
 		);
-		//binder.registerCustomEditor(Date.class, new FechaEditor());
+		*/
+		binder.registerCustomEditor(Date.class, new FechaEditor());
 	}
 	
 	@ModelAttribute("personaForm")
@@ -115,7 +116,7 @@ public class PersonaController {
 			BindingResult result) {
 		
 		if (personaForm.getId() == null)
-			throw new RuntimeException("Id inválido");
+			throw new RuntimeException("Id invï¿½lido");
 			
 		if (!result.hasErrors()) {
 			Persona p = new Persona();

@@ -6,20 +6,26 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class FechaEditor extends PropertyEditorSupport {
-	private SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+	public static final String PATRON = "yyyy-MM-dd";
 	
 	@Override
 	public void setAsText(String text) throws IllegalArgumentException {
 		Date fecha = null;
 		try {
-			fecha = sdf.parse(text);
+			fecha = new SimpleDateFormat(PATRON).parse(text);
 		} catch (ParseException e) { }
-		setValue(fecha);
+		
+		super.setValue(fecha);
 	}
 	
 	@Override
 	public String getAsText() {
-		return sdf.format((Date)getValue());
+		String fecha = "";
+		
+		if (super.getValue() != null)
+			fecha = new SimpleDateFormat(PATRON)
+							.format(super.getValue());
+		
+		return fecha;
 	}
-
 }

@@ -19,7 +19,7 @@
 		const MODIFICAR = 1;
 		
 		var eliminar = function(id) {
-			var conf = confirm("Seguro quiere eliminar la persona con id = " + id);
+			var conf = confirm('<t:message code="persona.index.js.eliminar"/> = ' + id);
 			
 			if (conf)
 				window.location.href="eliminar.do?id=" + id;

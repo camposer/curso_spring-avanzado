@@ -20,14 +20,14 @@ public class PersonaFormValidator implements Validator {
 		
 		if (personaForm.getNombre() == null || 
 				personaForm.getNombre().trim().equals(""))
-			errores.reject("nombre", "Nombre inválido");
+			errores.rejectValue("nombre", "persona.form.error.nombre", "Nombre inválido");
 
 		if (personaForm.getApellido() == null || 
 				personaForm.getApellido().trim().equals(""))
-			errores.reject("apellido", "Apellido inválido");
+			errores.rejectValue("apellido", "persona.form.error.apellido", "Apellido inválido");
 		
 		if (personaForm.getFechaNacimiento() == null)
-			errores.reject("fechaNacimiento", "Fecha inválida");
+			errores.rejectValue("fechaNacimiento", "persona.form.error.fecha", "Fecha inválida");
 	}
 
 }
