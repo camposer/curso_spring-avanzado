@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
+import springavanzado.ejercicio1.dao.OrdenadorDao;
 import springavanzado.ejercicio1.dao.PersonaDao;
 import springavanzado.model.Persona;
 
@@ -14,6 +15,8 @@ import springavanzado.model.Persona;
 public class PersonaServiceImpl implements PersonaService {
 	@Autowired
 	private PersonaDao personaDao;
+	@Autowired
+	private OrdenadorDao ordenadorDao;
 
 	public void agregarPersona(Persona p) {
 			personaDao.agregar(p);
@@ -24,6 +27,7 @@ public class PersonaServiceImpl implements PersonaService {
 	}
 
 	public void eliminarPersona(Integer id) {
+		ordenadorDao.eliminarPorPersonaId(id);
 		personaDao.eliminar(id);
 	}
 

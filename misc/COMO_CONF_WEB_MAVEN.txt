@@ -1,0 +1,13 @@
+Cómo configurar proyecto Web y Maven en Eclipse (sin arquetipos)
+================================================================
+
+1.- Crear proyecto Web dinámico
+2.- Crear estructura de carpetas "tipo Maven". Crear dentro de src la siguiente jerarquía:
+	- src/main/java
+	- src/main/resources
+	- src/test/java
+	- src/test/resources
+3.- Configurar carpetas de Maven como nuevo classpath. Pedir propiedades del proyecto y dentro de Java Build Path -> Source, eliminar la carpeta src y agregar las nuevas 4 carpetas (no seleccionar desde la raíz!)
+4.- Convertir proyecto a Maven. Clic derecho sobre el proyecto -> Configure -> Convert to Maven project
+
+Enjoy!

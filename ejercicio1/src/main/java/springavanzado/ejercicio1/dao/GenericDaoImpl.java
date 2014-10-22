@@ -12,8 +12,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class GenericDaoImpl<T, K> implements GenericDao<T, K> {
 	@Autowired
 	@PersistenceContext
-	private EntityManager em;
-	private Class<T> clazz;
+	protected EntityManager em;
+	protected Class<T> clazz;
 
 	@SuppressWarnings("unchecked")
 	public GenericDaoImpl() {
