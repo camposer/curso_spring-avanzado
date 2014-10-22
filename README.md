@@ -30,3 +30,17 @@ Curso de Spring Avanzado
 - Scaling Agile @ Spotify
 	- http://ucvox.files.wordpress.com/2012/11/113617905-scaling-agile-spotify-11.pdf
 	- http://blog.crisp.se/wp-content/uploads/2013/06/Scaling-Agile-at-Spotify-DARE-2013-Jimmy-Janl%C3%A9n-Crisp.pdf
+- TaskExecutor & Scheduling
+	- Spring and Java Thread example (mkyong)
+		- http://www.mkyong.com/spring/spring-and-java-thread-example/
+	- Spring Batch + Spring TaskScheduler example
+		- http://www.mkyong.com/spring-batch/spring-batch-and-spring-taskscheduler-example/
+- AOP
+	- Spring AOP Example – Advice
+		- http://www.mkyong.com/spring/spring-aop-examples-advice/
+	- Spring AOP Example – Pointcut , Advisor
+		- http://www.mkyong.com/spring/spring-aop-example-pointcut-advisor/
+	- Spring AOP + AspectJ annotation example
+		- http://www.mkyong.com/spring3/spring-aop-aspectj-annotation-example/
+	- The AspectJ Programming Guide
+		- http://www.eclipse.org/aspectj/doc/released/progguide/index.html
