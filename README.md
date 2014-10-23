@@ -48,3 +48,5 @@ Curso de Spring Avanzado
 		- http://www.mkyong.com/spring3/spring-aop-aspectj-annotation-example/
 	- The AspectJ Programming Guide
 		- http://www.eclipse.org/aspectj/doc/released/progguide/index.html
+	- Spring AOP: Intercepting method with custom annotation
+		- http://blog.javaforge.net/post/76125490725/spring-aop-method-interceptor-annotation
