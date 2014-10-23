@@ -17,6 +17,10 @@ Curso de Spring Avanzado
 
 ##Enlaces
 
+- Simple Spring Tutorial
+	- http://simplespringtutorial.com/
+- Spring By Example
+	- http://www.springbyexample.org/
 - Referencia de Spring
 	- http://docs.spring.io/spring/docs/4.1.2.BUILD-SNAPSHOT/spring-framework-reference/htmlsingle/
 - Curso de Spring y JPA/Hibernate
