@@ -34,11 +34,6 @@ Curso de Spring Avanzado
 - Scaling Agile @ Spotify
 	- http://ucvox.files.wordpress.com/2012/11/113617905-scaling-agile-spotify-11.pdf
 	- http://blog.crisp.se/wp-content/uploads/2013/06/Scaling-Agile-at-Spotify-DARE-2013-Jimmy-Janl%C3%A9n-Crisp.pdf
-- TaskExecutor & Scheduling
-	- Spring and Java Thread example (mkyong)
-		- http://www.mkyong.com/spring/spring-and-java-thread-example/
-	- Spring Batch + Spring TaskScheduler example
-		- http://www.mkyong.com/spring-batch/spring-batch-and-spring-taskscheduler-example/
 - AOP
 	- Spring AOP Example – Advice
 		- http://www.mkyong.com/spring/spring-aop-examples-advice/
@@ -50,3 +45,14 @@ Curso de Spring Avanzado
 		- http://www.eclipse.org/aspectj/doc/released/progguide/index.html
 	- Spring AOP: Intercepting method with custom annotation
 		- http://blog.javaforge.net/post/76125490725/spring-aop-method-interceptor-annotation
+- TaskExecutor & Scheduling
+	- Spring and Java Thread example (mkyong)
+		- http://www.mkyong.com/spring/spring-and-java-thread-example/
+	- Spring Batch + Spring TaskScheduler example
+		- http://www.mkyong.com/spring-batch/spring-batch-and-spring-taskscheduler-example/
+- Simple Spring JMS
+	- http://www.springbyexample.org/examples/simple-spring-jms.html
+- Remoting and web service using Spring
+	- http://docs.spring.io/spring-framework/docs/current/spring-framework-reference/html/remoting.html
+- Enterprise JavaBeans (EJB) integration
+	- http://docs.spring.io/spring-framework/docs/current/spring-framework-reference/html/ejb.html
