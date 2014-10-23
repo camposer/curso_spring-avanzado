@@ -22,7 +22,7 @@ Curso de Spring Avanzado
 - Spring By Example
 	- http://www.springbyexample.org/
 - Referencia de Spring
-	- http://docs.spring.io/spring/docs/4.1.2.BUILD-SNAPSHOT/spring-framework-reference/htmlsingle/
+	- http://docs.spring.io/spring-framework/docs/current/spring-framework-reference/html/index.html
 - Curso de Spring y JPA/Hibernate
 	- https://github.com/camposer/curso_spring-hibernate
 - Curso de Spring MVC
