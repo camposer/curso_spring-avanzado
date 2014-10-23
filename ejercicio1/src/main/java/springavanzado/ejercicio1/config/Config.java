@@ -9,9 +9,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @Configuration
-@EnableTransactionManagement
+@EnableTransactionManagement // Habilita @Transactional
+@EnableWebMvc // Habilita produces y consumes
 public class Config {
 	@Bean
 	public EntityManagerFactory entityManagerFactory() {
