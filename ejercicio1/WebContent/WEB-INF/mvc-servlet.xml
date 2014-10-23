@@ -9,6 +9,8 @@
 
 	<context:annotation-config />
 	<context:component-scan base-package="springavanzado.ejercicio1.controller" />
+	<!-- Equivalente a @EnableWebMvc -->
+	<!-- Habilita produces y consumes -->
 	<mvc:annotation-driven />
 	
 	<!-- BEGIN: i18n -->

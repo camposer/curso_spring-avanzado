@@ -24,7 +24,7 @@ import springavanzado.model.Persona;
  * } 
  */
 @Controller
-@RequestMapping("/v1/personas")
+@RequestMapping("/api/personas")
 public class PersonaRest {
 	@Autowired
 	private PersonaService personaService;

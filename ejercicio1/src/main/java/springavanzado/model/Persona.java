@@ -16,6 +16,8 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 /**
  * The persistent class for the PERSONA database table.
@@ -42,6 +44,7 @@ public class Persona implements Serializable {
 	private String nombre;
 
 	//bi-directional many-to-one association to Ordenador
+	@JsonIgnore
 	@OneToMany(mappedBy="persona")
 	private List<Ordenador> ordenadores;
 
