@@ -1,0 +1,9 @@
+﻿Cómo configurar API REST
+========================
+
+1.- Agregar dependencias al POM: jackson-databind y jackson-core-asl
+
+2.- Habilitar el uso de anotaciones MVC en el proyecto, agregando la etiqueta: <mvc:annotation-driven />
+
+3.- Construir la API REST
+	- IMPORTANTE: Considerar que si el método produce JSON, el cliente deberá enviar la cabecera "Accept: application/json". Y si el método consume JSON, el cliente deberá enviar la cabecera "Content-type: application/json"

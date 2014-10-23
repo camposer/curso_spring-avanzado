@@ -19,6 +19,7 @@ Ejercicio1
 
 3.- Implementar el CRUD+ para Ordenador. Seguir el mismo orden de implementación aplicado en CRUD+ de Persona.
 
+4.- Implementar API REST para Persona y Ordenador
 
 
 
