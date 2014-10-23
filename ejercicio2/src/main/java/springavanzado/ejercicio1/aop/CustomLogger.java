@@ -2,7 +2,6 @@ package springavanzado.ejercicio1.aop;
 
 import java.io.FileWriter;
 import java.io.PrintWriter;
-import java.lang.reflect.Parameter;
 import java.util.Date;
 
 import org.aopalliance.intercept.MethodInterceptor;
@@ -16,11 +15,11 @@ public class CustomLogger implements MethodInterceptor {
 		PrintWriter pw = new PrintWriter(new FileWriter(rutaArchivo, true));
 		
 		String linea = "Método: " + methodInvocation.getMethod().getName();
-		String parametros = "";
-		for (Parameter p : methodInvocation.getMethod().getParameters())
-			parametros += p.getName() + " ";
+		String argumentos = "";
+		for (Object a : methodInvocation.getArguments())
+			argumentos += a + " ";
 		
-		linea += ", Parámetros: " + parametros;
+		linea += ", Argumentos: " + argumentos;
 		linea += ", Hora: " + new Date().toString();
 		
 		pw.println(linea);

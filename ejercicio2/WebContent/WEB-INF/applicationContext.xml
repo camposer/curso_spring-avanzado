@@ -8,8 +8,7 @@
  		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd">
 
 	<context:annotation-config />
-	<context:component-scan base-package="springavanzado.ejercicio1.config" /><!-- 
-		Configuraciones de BD -->
+	<context:component-scan base-package="springavanzado.ejercicio1.config" /><!-- Configuraciones de BD -->
 	<context:component-scan base-package="springavanzado.ejercicio1.dao" />
 	<context:component-scan base-package="springavanzado.ejercicio1.service" />
 	<context:component-scan base-package="springavanzado.ejercicio1.advisor" />

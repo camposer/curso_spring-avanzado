@@ -44,6 +44,7 @@ public class GenericDaoImpl<T, K> implements GenericDao<T, K> {
 				.getResultList();
 	}
 
+	@CustomLog
 	public T obtener(K id) {
 		return em.find(clazz, id);
 	}
