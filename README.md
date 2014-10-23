@@ -46,6 +46,8 @@ Curso de Spring Avanzado
 	- Spring AOP: Intercepting method with custom annotation
 		- http://blog.javaforge.net/post/76125490725/spring-aop-method-interceptor-annotation
 - TaskExecutor & Scheduling
+	- Task execution and scheduling
+		- http://docs.spring.io/spring/docs/current/spring-framework-reference/html/scheduling.html
 	- Spring and Java Thread example (mkyong)
 		- http://www.mkyong.com/spring/spring-and-java-thread-example/
 	- Spring Batch + Spring TaskScheduler example

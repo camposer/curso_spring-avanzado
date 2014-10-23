@@ -3,9 +3,11 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:task="http://www.springframework.org/schema/task"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
- 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd">
+ 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
+ 		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-4.1.xsd">
 
 	<context:annotation-config />
 	<context:component-scan base-package="springavanzado.ejercicio1.config" /><!-- Configuraciones de BD -->
@@ -14,10 +16,18 @@
 	<context:component-scan base-package="springavanzado.ejercicio1.advisor" />
 
 	<!-- Declarando proxy para personaDaoImpl -->
-	<bean id="loggerDao" class="springavanzado.ejercicio1.aop.CustomLogger">
+	<bean id="customLogger" class="springavanzado.ejercicio1.aop.CustomLogger">
 		<property name="rutaArchivo" value="C:\Users\Rodolfo\log.txt"/>
 	</bean>
 
+	<bean id="loggerTask" class="springavanzado.ejercicio1.task.LoggerTask">
+		<property name="rutaArchivo" value="C:\Users\Rodolfo\holaMundo.txt"/>
+	</bean>
+
+	<task:annotation-driven executor="taskExecutor" scheduler="taskScheduler"/>
+	<task:executor id="taskExecutor" pool-size="5"/>
+	<task:scheduler id="taskScheduler" pool-size="10"/>
+	
 	<!--  
 	<bean id="personaDaoProxy" 
                 class="org.springframework.aop.framework.ProxyFactoryBean">
