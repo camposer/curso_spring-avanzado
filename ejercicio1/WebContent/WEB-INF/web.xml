@@ -17,10 +17,6 @@
 		<servlet-name>mvc</servlet-name>
 		<url-pattern>*.do</url-pattern>
 	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>mvc</servlet-name>
-		<url-pattern>/api/*</url-pattern>
-	</servlet-mapping>
 
 	<!-- Carga del Contexto de Aplicación (global) -->
 	<listener>

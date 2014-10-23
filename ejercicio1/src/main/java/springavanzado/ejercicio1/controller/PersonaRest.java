@@ -41,6 +41,7 @@ public class PersonaRest {
 	
 	/**
 	 * GET /api/v1/personas
+	 * HEADER = Accept: application-json
 	 * RETURN = JSON
 	 */
 	@RequestMapping(
@@ -60,6 +61,7 @@ public class PersonaRest {
 	
 	/**
 	 * GET /api/v1/personas/{id}
+	 * HEADER = Accept: application-json
 	 * RETURN = JSON
 	 */
 	@RequestMapping(
@@ -81,15 +83,23 @@ public class PersonaRest {
 			value="/{id}",
 			method=RequestMethod.DELETE
 		)
-	public void eliminarPersona(
+	public @ResponseBody String eliminarPersona(
 				@PathVariable("id") Integer id
 			) {
 		personaService.eliminarPersona(id);
+		return "";
 	}
 	
 	/**
-	 * POST /api/v1/personas
+	 * POST /v1/personas.do
+	 * HEADER = Content-type: application-json
 	 * BODY = JSON
+	 * Ejemplo:
+	 * {
+	 * 	"nombre": "Nuevo",
+	 * 	"apellido": "Nuevo",
+	 * 	"fechanacimiento": "2012-01-01"
+	 * } 
 	 */
 	@RequestMapping(
 			value="",
@@ -105,7 +115,8 @@ public class PersonaRest {
 	}
 	
 	/**
-	 * PUT /api/v1/personas/{id}
+	 * PUT /v1/personas/{id}.do
+	 * HEADER = Content-type: application-json
 	 * BODY = JSON
 	 */
 	@RequestMapping(
@@ -113,11 +124,12 @@ public class PersonaRest {
 			method=RequestMethod.PUT,
 			consumes="application/json"
 		)
-	public void modificarPersona(
+	public @ResponseBody String modificarPersona(
 				@RequestBody Persona p,
 				@PathVariable("id") Integer id
 			) {
 		p.setId(id);
 		personaService.modificarPersona(p);
+		return "";
 	}
 }
